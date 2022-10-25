@@ -14495,6 +14495,9 @@ a.anchor-link {
 .reveal {
   font-size: 160%;
 }
+.reveal table {
+  font-size: var(--jp-ui-font-size1);
+}
 .reveal pre {
   width: inherit;
   padding: 0.4em;
@@ -14538,6 +14541,23 @@ div.jp-OutputPrompt {
   margin: 5px 5px 0 0;
 }
 
+.reveal div.highlight {
+  margin: 0;
+}
+
+.reveal div.highlight > pre {
+  margin: 0;
+  width: 100%;
+  font-size: var(--jp-code-font-size);
+}
+
+.reveal div.jp-OutputArea-output > pre {
+  margin: 0;
+  width: 90%;
+  font-size: var(--jp-code-font-size);
+  box-shadow: none;
+}
+
 /* Reveal navigation controls */
 
 .reveal .controls .navigate-left,
@@ -14578,17 +14598,14 @@ div.jp-OutputPrompt {
 
 /* Scrollbars */
 
-::-webkit-scrollbar
-{
+::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
-::-webkit-scrollbar *
-{
-  background:transparent;
+::-webkit-scrollbar * {
+  background: transparent;
 }
-::-webkit-scrollbar-thumb
-{
+::-webkit-scrollbar-thumb {
   background: #727272 !important;
 }
 </style>
@@ -14615,12 +14632,12 @@ div.jp-OutputPrompt {
                 },
                 displayAlign: 'center',
                 CommonHTML: {
-                    linebreaks: { 
-                    automatic: true 
+                    linebreaks: {
+                    automatic: true
                     }
                 }
             });
-        
+
             MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
         }
     }
@@ -14634,16 +14651,25 @@ div.jp-OutputPrompt {
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 
 <div class="reveal">
-<div class="slides"><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+<div class="slides"><section ><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Python-%E7%9A%84-50+-%E7%B7%B4%E7%BF%92%EF%BC%9A%E8%B3%87%E6%96%99%E7%A7%91%E5%AD%B8%E5%AD%B8%E7%BF%92%E6%89%8B%E5%86%8A">Python &#30340; 50+ &#32244;&#32722;&#65306;&#36039;&#26009;&#31185;&#23416;&#23416;&#32722;&#25163;&#20874;<a class="anchor-link" href="#Python-%E7%9A%84-50+-%E7%B7%B4%E7%BF%92%EF%BC%9A%E8%B3%87%E6%96%99%E7%A7%91%E5%AD%B8%E5%AD%B8%E7%BF%92%E6%89%8B%E5%86%8A">&#182;</a></h1><blockquote><p>網路資料擷取</p>
+<h1 id="Python-%E7%9A%84-50+-%E7%B7%B4%E7%BF%92%EF%BC%9A%E8%B3%87%E6%96%99%E7%A7%91%E5%AD%B8%E5%AD%B8%E7%BF%92%E6%89%8B%E5%86%8A">Python &#30340; 50+ &#32244;&#32722;&#65306;&#36039;&#26009;&#31185;&#23416;&#23416;&#32722;&#25163;&#20874;<a class="anchor-link" href="#Python-%E7%9A%84-50+-%E7%B7%B4%E7%BF%92%EF%BC%9A%E8%B3%87%E6%96%99%E7%A7%91%E5%AD%B8%E5%AD%B8%E7%BF%92%E6%89%8B%E5%86%8A">&#182;</a></h1><blockquote>
+<p>網路資料擷取</p>
 </blockquote>
-<p><a href="https://www.datainpoint.com/">數據交點</a> | 郭耀仁 <a href="https://linktr.ee/yaojenkuo">https://linktr.ee/yaojenkuo</a></p>
+<p><a href="https://www.datainpoint.com/">數聚點</a> | 郭耀仁 <a href="https://linktr.ee/yaojenkuo">https://linktr.ee/yaojenkuo</a></p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div>
+</div>
+</div></section><section ><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
@@ -14659,21 +14685,38 @@ div.jp-OutputPrompt {
 </div>
 </div>
 
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div></section></section><section ><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E9%97%9C%E6%96%BC%E7%B6%B2%E8%B7%AF%E8%B3%87%E6%96%99%E6%93%B7%E5%8F%96">&#38364;&#26044;&#32178;&#36335;&#36039;&#26009;&#25847;&#21462;<a class="anchor-link" href="#%E9%97%9C%E6%96%BC%E7%B6%B2%E8%B7%AF%E8%B3%87%E6%96%99%E6%93%B7%E5%8F%96">&#182;</a></h2>
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E4%BB%80%E9%BA%BC%E6%98%AF%E7%B6%B2%E8%B7%AF%E8%B3%87%E6%96%99%E6%93%B7%E5%8F%96%EF%BC%9F">&#20160;&#40636;&#26159;&#32178;&#36335;&#36039;&#26009;&#25847;&#21462;&#65311;<a class="anchor-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AF%E7%B6%B2%E8%B7%AF%E8%B3%87%E6%96%99%E6%93%B7%E5%8F%96%EF%BC%9F">&#182;</a></h2><blockquote><p>網路資料擷取是一種透過超文本傳輸協定（Hypertext Transfer Protocol, HTTP）直接從網際網路獲取資料的技術，對比手動透過瀏覽器擷取資料，網路資料擷取通常指的是透過自動化的程式來進行，並將擷取所得資料儲存到資料庫或試算表供後續分析使用。</p>
+<h2 id="%E4%BB%80%E9%BA%BC%E6%98%AF%E7%B6%B2%E8%B7%AF%E8%B3%87%E6%96%99%E6%93%B7%E5%8F%96%EF%BC%9F">&#20160;&#40636;&#26159;&#32178;&#36335;&#36039;&#26009;&#25847;&#21462;&#65311;<a class="anchor-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AF%E7%B6%B2%E8%B7%AF%E8%B3%87%E6%96%99%E6%93%B7%E5%8F%96%EF%BC%9F">&#182;</a></h2><blockquote>
+<p>網路資料擷取是一種透過超文本傳輸協定（Hypertext Transfer Protocol, HTTP）直接從網際網路獲取資料的技術，對比手動透過瀏覽器擷取資料，網路資料擷取通常指的是透過自動化的程式來進行，並將擷取所得資料儲存到資料庫或試算表供後續分析使用。</p>
 </blockquote>
 <p>來源：<a href="https://en.wikipedia.org/wiki/Web_scraping">https://en.wikipedia.org/wiki/Web_scraping</a></p>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E7%B6%B2%E8%B7%AF%E8%B3%87%E6%96%99%E6%93%B7%E5%8F%96%E7%9A%84%E5%85%A9%E5%80%8B%E6%A0%B8%E5%BF%83%E4%BB%BB%E5%8B%99">&#32178;&#36335;&#36039;&#26009;&#25847;&#21462;&#30340;&#20841;&#20491;&#26680;&#24515;&#20219;&#21209;<a class="anchor-link" href="#%E7%B6%B2%E8%B7%AF%E8%B3%87%E6%96%99%E6%93%B7%E5%8F%96%E7%9A%84%E5%85%A9%E5%80%8B%E6%A0%B8%E5%BF%83%E4%BB%BB%E5%8B%99">&#182;</a></h2><ol>
 <li>傳輸資料。</li>
@@ -14681,14 +14724,26 @@ div.jp-OutputPrompt {
 </ol>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E4%BB%80%E9%BA%BC%E6%98%AF%E5%82%B3%E8%BC%B8%E8%B3%87%E6%96%99%EF%BC%9F">&#20160;&#40636;&#26159;&#20659;&#36664;&#36039;&#26009;&#65311;<a class="anchor-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AF%E5%82%B3%E8%BC%B8%E8%B3%87%E6%96%99%EF%BC%9F">&#182;</a></h2><p>傳輸資料指的是在網際網路的通訊協定下，瀏覽器（或者一段爬蟲程式）與網頁伺服器之間交換超文本資料的行為，專有技術名詞為超文本傳輸協定（Hypertext Transfer Protocol, HTTP）。</p>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E8%B3%87%E6%96%99%E5%82%B3%E8%BC%B8%E5%BF%85%E5%AE%9A%E6%98%AF%E9%9B%99%E5%90%91%E7%9A%84">&#36039;&#26009;&#20659;&#36664;&#24517;&#23450;&#26159;&#38617;&#21521;&#30340;<a class="anchor-link" href="#%E8%B3%87%E6%96%99%E5%82%B3%E8%BC%B8%E5%BF%85%E5%AE%9A%E6%98%AF%E9%9B%99%E5%90%91%E7%9A%84">&#182;</a></h2><ol>
 <li>瀏覽器（或者一段爬蟲程式）傳輸資料給網頁伺服器：請求（Request）。</li>
@@ -14696,8 +14751,14 @@ div.jp-OutputPrompt {
 </ol>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E7%B6%B2%E8%B7%AF%E8%B3%87%E6%96%99%E6%93%B7%E5%8F%96%E6%9C%80%E5%B8%B8%E4%BD%BF%E7%94%A8%E7%9A%84%E8%AB%8B%E6%B1%82%E6%96%B9%E6%B3%95">&#32178;&#36335;&#36039;&#26009;&#25847;&#21462;&#26368;&#24120;&#20351;&#29992;&#30340;&#35531;&#27714;&#26041;&#27861;<a class="anchor-link" href="#%E7%B6%B2%E8%B7%AF%E8%B3%87%E6%96%99%E6%93%B7%E5%8F%96%E6%9C%80%E5%B8%B8%E4%BD%BF%E7%94%A8%E7%9A%84%E8%AB%8B%E6%B1%82%E6%96%B9%E6%B3%95">&#182;</a></h2><ul>
 <li>GET</li>
@@ -14705,20 +14766,38 @@ div.jp-OutputPrompt {
 </ul>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E4%BB%80%E9%BA%BC%E6%98%AF-GET-%E8%AB%8B%E6%B1%82%EF%BC%9F">&#20160;&#40636;&#26159; GET &#35531;&#27714;&#65311;<a class="anchor-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AF-GET-%E8%AB%8B%E6%B1%82%EF%BC%9F">&#182;</a></h2><p>請求網頁伺服器展示指定的資源，應用於取得資料，例如瀏覽 Instagram 相片。</p>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E4%BB%80%E9%BA%BC%E6%98%AF-POST-%E8%AB%8B%E6%B1%82%EF%BC%9F">&#20160;&#40636;&#26159; POST &#35531;&#27714;&#65311;<a class="anchor-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AF-POST-%E8%AB%8B%E6%B1%82%EF%BC%9F">&#182;</a></h2><p>提交指定資源給網頁伺服器，通常伴隨著伺服器狀態的改變，例如分享 Instagram 相片。</p>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E9%80%8F%E9%81%8E%E7%80%8F%E8%A6%BD%E5%99%A8%E7%9A%84%E6%93%8D%E4%BD%9C%EF%BC%8C%E6%88%91%E5%80%91%E4%BB%A5%E4%BD%BF%E7%94%A8%E8%80%85%E4%BB%8B%E9%9D%A2%E9%80%B2%E8%A1%8C%E8%B3%87%E6%96%99%E7%9A%84%E5%82%B3%E8%BC%B8">&#36879;&#36942;&#28687;&#35261;&#22120;&#30340;&#25805;&#20316;&#65292;&#25105;&#20497;&#20197;&#20351;&#29992;&#32773;&#20171;&#38754;&#36914;&#34892;&#36039;&#26009;&#30340;&#20659;&#36664;<a class="anchor-link" href="#%E9%80%8F%E9%81%8E%E7%80%8F%E8%A6%BD%E5%99%A8%E7%9A%84%E6%93%8D%E4%BD%9C%EF%BC%8C%E6%88%91%E5%80%91%E4%BB%A5%E4%BD%BF%E7%94%A8%E8%80%85%E4%BB%8B%E9%9D%A2%E9%80%B2%E8%A1%8C%E8%B3%87%E6%96%99%E7%9A%84%E5%82%B3%E8%BC%B8">&#182;</a></h2><ul>
 <li>在瀏覽器輸入網址（Uniform Resource Locator, URL）。</li>
@@ -14727,24 +14806,48 @@ div.jp-OutputPrompt {
 </ul>
 
 </div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section></section><section ><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E9%96%8B%E7%99%BC%E4%BA%BA%E5%93%A1%E5%B7%A5%E5%85%B7">&#38283;&#30332;&#20154;&#21729;&#24037;&#20855;<a class="anchor-link" href="#%E9%96%8B%E7%99%BC%E4%BA%BA%E5%93%A1%E5%B7%A5%E5%85%B7">&#182;</a></h2>
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E6%88%91%E5%80%91%E5%8F%AF%E4%BB%A5%E9%80%8F%E9%81%8E%E7%80%8F%E8%A6%BD%E5%99%A8%E7%9A%84%E9%96%8B%E7%99%BC%E4%BA%BA%E5%93%A1%E5%B7%A5%E5%85%B7%EF%BC%88Developer-Tools%EF%BC%89%E8%A7%80%E5%AF%9F%E8%B3%87%E6%96%99%E7%9A%84%E5%82%B3%E8%BC%B8">&#25105;&#20497;&#21487;&#20197;&#36879;&#36942;&#28687;&#35261;&#22120;&#30340;&#38283;&#30332;&#20154;&#21729;&#24037;&#20855;&#65288;Developer Tools&#65289;&#35264;&#23519;&#36039;&#26009;&#30340;&#20659;&#36664;<a class="anchor-link" href="#%E6%88%91%E5%80%91%E5%8F%AF%E4%BB%A5%E9%80%8F%E9%81%8E%E7%80%8F%E8%A6%BD%E5%99%A8%E7%9A%84%E9%96%8B%E7%99%BC%E4%BA%BA%E5%93%A1%E5%B7%A5%E5%85%B7%EF%BC%88Developer-Tools%EF%BC%89%E8%A7%80%E5%AF%9F%E8%B3%87%E6%96%99%E7%9A%84%E5%82%B3%E8%BC%B8">&#182;</a></h2>
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="https://i.imgur.com/3Synk8m.png?1" alt="Imgur"></p>
+<p><img src="https://i.imgur.com/3Synk8m.png?1" alt="Imgur" /></p>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E9%BB%9E%E9%81%B8-Network-%E8%A7%80%E5%AF%9F%E8%B3%87%E6%96%99%E5%82%B3%E8%BC%B8%E7%9A%84%E7%B4%B0%E7%AF%80">&#40670;&#36984; Network &#35264;&#23519;&#36039;&#26009;&#20659;&#36664;&#30340;&#32048;&#31680;<a class="anchor-link" href="#%E9%BB%9E%E9%81%B8-Network-%E8%A7%80%E5%AF%9F%E8%B3%87%E6%96%99%E5%82%B3%E8%BC%B8%E7%9A%84%E7%B4%B0%E7%AF%80">&#182;</a></h2><ol>
 <li>開發人員工具。</li>
@@ -14753,14 +14856,26 @@ div.jp-OutputPrompt {
 </ol>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="https://i.imgur.com/OG0Huwj.png?1" alt="Imgur"></p>
+<p><img src="https://i.imgur.com/OG0Huwj.png?1" alt="Imgur" /></p>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E6%AF%8F%E4%B8%80%E5%80%8B%E6%AA%94%E6%A1%88%E9%83%BD%E6%98%AF%E4%B8%80%E7%B5%84%E5%AE%8C%E6%95%B4%E7%9A%84%E8%AB%8B%E6%B1%82%E8%88%87%E5%9B%9E%E8%A6%86">&#27599;&#19968;&#20491;&#27284;&#26696;&#37117;&#26159;&#19968;&#32068;&#23436;&#25972;&#30340;&#35531;&#27714;&#33287;&#22238;&#35206;<a class="anchor-link" href="#%E6%AF%8F%E4%B8%80%E5%80%8B%E6%AA%94%E6%A1%88%E9%83%BD%E6%98%AF%E4%B8%80%E7%B5%84%E5%AE%8C%E6%95%B4%E7%9A%84%E8%AB%8B%E6%B1%82%E8%88%87%E5%9B%9E%E8%A6%86">&#182;</a></h2><ul>
 <li>Request<ul>
@@ -14776,8 +14891,14 @@ div.jp-OutputPrompt {
 </ul>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E5%82%B3%E8%BC%B8%E8%B3%87%E6%96%99%E7%9A%84%E4%B8%8D%E5%90%8C%E6%A0%BC%E5%BC%8F">&#20659;&#36664;&#36039;&#26009;&#30340;&#19981;&#21516;&#26684;&#24335;<a class="anchor-link" href="#%E5%82%B3%E8%BC%B8%E8%B3%87%E6%96%99%E7%9A%84%E4%B8%8D%E5%90%8C%E6%A0%BC%E5%BC%8F">&#182;</a></h2><ul>
 <li>XHR(XMLHttpRequest)。</li>
@@ -14786,8 +14907,14 @@ div.jp-OutputPrompt {
 </ul>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E5%8F%AF%E4%BB%A5%E8%97%89%E7%94%B1%E3%80%8C%E6%9A%AB%E6%99%82%E3%80%8D%E9%97%9C%E9%96%89%E7%80%8F%E8%A6%BD%E5%99%A8-JavaScript-%E4%BE%86%E7%8C%9C%E6%B8%AC%E8%B3%87%E6%96%99%E6%A0%BC%E5%BC%8F">&#21487;&#20197;&#34249;&#30001;&#12300;&#26283;&#26178;&#12301;&#38364;&#38281;&#28687;&#35261;&#22120; JavaScript &#20358;&#29468;&#28204;&#36039;&#26009;&#26684;&#24335;<a class="anchor-link" href="#%E5%8F%AF%E4%BB%A5%E8%97%89%E7%94%B1%E3%80%8C%E6%9A%AB%E6%99%82%E3%80%8D%E9%97%9C%E9%96%89%E7%80%8F%E8%A6%BD%E5%99%A8-JavaScript-%E4%BE%86%E7%8C%9C%E6%B8%AC%E8%B3%87%E6%96%99%E6%A0%BC%E5%BC%8F">&#182;</a></h2><ul>
 <li>關閉 JavaScript 後資料消失，檢查 <strong>XHR</strong>。</li>
@@ -14795,14 +14922,26 @@ div.jp-OutputPrompt {
 </ul>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E3%80%8C%E6%9A%AB%E6%99%82%E3%80%8D%E9%97%9C%E9%96%89-Chrome-%E7%80%8F%E8%A6%BD%E5%99%A8-JavaScript-%E7%9A%84%E5%A4%96%E6%8E%9B">&#12300;&#26283;&#26178;&#12301;&#38364;&#38281; Chrome &#28687;&#35261;&#22120; JavaScript &#30340;&#22806;&#25499;<a class="anchor-link" href="#%E3%80%8C%E6%9A%AB%E6%99%82%E3%80%8D%E9%97%9C%E9%96%89-Chrome-%E7%80%8F%E8%A6%BD%E5%99%A8-JavaScript-%E7%9A%84%E5%A4%96%E6%8E%9B">&#182;</a></h2><p><a href="https://chrome.google.com/webstore/detail/quick-javascript-switcher/geddoclleiomckbhadiaipdggiiccfje">JavaScript Switcher</a></p>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E5%B9%BE%E5%80%8B%E7%AF%84%E4%BE%8B%E7%B6%B2%E7%AB%99">&#24190;&#20491;&#31684;&#20363;&#32178;&#31449;<a class="anchor-link" href="#%E5%B9%BE%E5%80%8B%E7%AF%84%E4%BE%8B%E7%B6%B2%E7%AB%99">&#182;</a></h2><ul>
 <li><a href="https://ecshweb.pchome.com.tw/search/v3.3/">https://ecshweb.pchome.com.tw/search/v3.3/</a>：關閉 JavaScript 後資料消失，檢查 <strong>XHR</strong>。</li>
@@ -14811,8 +14950,14 @@ div.jp-OutputPrompt {
 </ul>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E4%B8%80%E4%BD%86%E6%89%BE%E5%88%B0%E8%B3%87%E6%96%99%EF%BC%8C%E5%8F%AF%E4%BB%A5%E6%AA%A2%E6%9F%A5%E5%82%B3%E8%BC%B8%E7%9A%84%E7%B4%B0%E7%AF%80">&#19968;&#20294;&#25214;&#21040;&#36039;&#26009;&#65292;&#21487;&#20197;&#27298;&#26597;&#20659;&#36664;&#30340;&#32048;&#31680;<a class="anchor-link" href="#%E4%B8%80%E4%BD%86%E6%89%BE%E5%88%B0%E8%B3%87%E6%96%99%EF%BC%8C%E5%8F%AF%E4%BB%A5%E6%AA%A2%E6%9F%A5%E5%82%B3%E8%BC%B8%E7%9A%84%E7%B4%B0%E7%AF%80">&#182;</a></h2><ul>
 <li>Headers<ul>
@@ -14826,8 +14971,14 @@ div.jp-OutputPrompt {
 </ul>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E4%B8%80%E4%BD%86%E6%89%BE%E5%88%B0%E8%B3%87%E6%96%99%EF%BC%8C%E5%8F%AF%E4%BB%A5%E6%AA%A2%E6%9F%A5%E5%82%B3%E8%BC%B8%E7%9A%84%E7%B4%B0%E7%AF%80%EF%BC%88%E7%BA%8C%EF%BC%89">&#19968;&#20294;&#25214;&#21040;&#36039;&#26009;&#65292;&#21487;&#20197;&#27298;&#26597;&#20659;&#36664;&#30340;&#32048;&#31680;&#65288;&#32396;&#65289;<a class="anchor-link" href="#%E4%B8%80%E4%BD%86%E6%89%BE%E5%88%B0%E8%B3%87%E6%96%99%EF%BC%8C%E5%8F%AF%E4%BB%A5%E6%AA%A2%E6%9F%A5%E5%82%B3%E8%BC%B8%E7%9A%84%E7%B4%B0%E7%AF%80%EF%BC%88%E7%BA%8C%EF%BC%89">&#182;</a></h2><ul>
 <li>Preview（回應在瀏覽器上渲染的樣子。）</li>
@@ -14836,44 +14987,85 @@ div.jp-OutputPrompt {
 </ul>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="https://i.imgur.com/cTva78r.png?1" alt="Imgur"></p>
+<p><img src="https://i.imgur.com/cTva78r.png?1" alt="Imgur" /></p>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="https://i.imgur.com/LMVp0m7.png?1" alt="Imgur"></p>
+<p><img src="https://i.imgur.com/LMVp0m7.png?1" alt="Imgur" /></p>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E5%A6%82%E4%BD%95%E5%9C%A8-Python-%E7%A8%8B%E5%BC%8F%E8%88%87%E7%B6%B2%E9%A0%81%E4%BC%BA%E6%9C%8D%E5%99%A8%E4%B9%8B%E9%96%93%E5%82%B3%E8%BC%B8%E8%B3%87%E6%96%99%EF%BC%9F">&#22914;&#20309;&#22312; Python &#31243;&#24335;&#33287;&#32178;&#38913;&#20282;&#26381;&#22120;&#20043;&#38291;&#20659;&#36664;&#36039;&#26009;&#65311;<a class="anchor-link" href="#%E5%A6%82%E4%BD%95%E5%9C%A8-Python-%E7%A8%8B%E5%BC%8F%E8%88%87%E7%B6%B2%E9%A0%81%E4%BC%BA%E6%9C%8D%E5%99%A8%E4%B9%8B%E9%96%93%E5%82%B3%E8%BC%B8%E8%B3%87%E6%96%99%EF%BC%9F">&#182;</a></h2><p>透過第三方模組 <a href="https://requests.readthedocs.io/en/master/">Requests</a>。</p>
 
 </div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section></section><section ><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E9%97%9C%E6%96%BC-Requests">&#38364;&#26044; Requests<a class="anchor-link" href="#%E9%97%9C%E6%96%BC-Requests">&#182;</a></h2>
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E4%BB%80%E9%BA%BC%E6%98%AF-Requests%EF%BC%9F">&#20160;&#40636;&#26159; Requests&#65311;<a class="anchor-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AF-Requests%EF%BC%9F">&#182;</a></h2><blockquote><p>Requests 是 Python 的超文本傳輸協定第三方模組，標榜簡潔且人性化。</p>
+<h2 id="%E4%BB%80%E9%BA%BC%E6%98%AF-Requests%EF%BC%9F">&#20160;&#40636;&#26159; Requests&#65311;<a class="anchor-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AF-Requests%EF%BC%9F">&#182;</a></h2><blockquote>
+<p>Requests 是 Python 的超文本傳輸協定第三方模組，標榜簡潔且人性化。</p>
 </blockquote>
 <p>來源：<a href="https://requests.readthedocs.io/en/master/">https://requests.readthedocs.io/en/master/</a></p>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E4%BB%A5-import-%E6%8C%87%E4%BB%A4%E8%BC%89%E5%85%A5-Requests">&#20197; <code>import</code> &#25351;&#20196;&#36617;&#20837; Requests<a class="anchor-link" href="#%E4%BB%A5-import-%E6%8C%87%E4%BB%A4%E8%BC%89%E5%85%A5-Requests">&#182;</a></h2>
 </div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
@@ -14886,24 +15078,40 @@ div.jp-OutputPrompt {
 </div>
 </div>
 
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E5%A6%82%E6%9E%9C%E7%92%B0%E5%A2%83%E4%B8%AD%E6%B2%92%E6%9C%89%E5%AE%89%E8%A3%9D-Requests%EF%BC%8C%E8%BC%89%E5%85%A5%E6%99%82%E6%9C%83%E9%81%AD%E9%81%87-ModuleNotFoundError">&#22914;&#26524;&#29872;&#22659;&#20013;&#27794;&#26377;&#23433;&#35037; Requests&#65292;&#36617;&#20837;&#26178;&#26371;&#36973;&#36935; <code>ModuleNotFoundError</code><a class="anchor-link" href="#%E5%A6%82%E6%9E%9C%E7%92%B0%E5%A2%83%E4%B8%AD%E6%B2%92%E6%9C%89%E5%AE%89%E8%A3%9D-Requests%EF%BC%8C%E8%BC%89%E5%85%A5%E6%99%82%E6%9C%83%E9%81%AD%E9%81%87-ModuleNotFoundError">&#182;</a></h2>
-<pre><code>Traceback (most recent call last):
-  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
-ModuleNotFoundError: No module named 'requests'</code></pre>
+<h2 id="%E5%A6%82%E6%9E%9C%E7%92%B0%E5%A2%83%E4%B8%AD%E6%B2%92%E6%9C%89%E5%AE%89%E8%A3%9D-Requests%EF%BC%8C%E8%BC%89%E5%85%A5%E6%99%82%E6%9C%83%E9%81%AD%E9%81%87-ModuleNotFoundError">&#22914;&#26524;&#29872;&#22659;&#20013;&#27794;&#26377;&#23433;&#35037; Requests&#65292;&#36617;&#20837;&#26178;&#26371;&#36973;&#36935; <code>ModuleNotFoundError</code><a class="anchor-link" href="#%E5%A6%82%E6%9E%9C%E7%92%B0%E5%A2%83%E4%B8%AD%E6%B2%92%E6%9C%89%E5%AE%89%E8%A3%9D-Requests%EF%BC%8C%E8%BC%89%E5%85%A5%E6%99%82%E6%9C%83%E9%81%AD%E9%81%87-ModuleNotFoundError">&#182;</a></h2><pre><code>Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+ModuleNotFoundError: No module named 'requests'
+</code></pre>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E5%A6%82%E6%9E%9C%E9%81%AD%E9%81%87-ModuleNotFoundError-%E5%8F%AF%E4%BB%A5%E5%9C%A8%E7%B5%82%E7%AB%AF%E6%A9%9F%E4%BD%BF%E7%94%A8-pip-install-%E6%8C%87%E4%BB%A4%E5%AE%89%E8%A3%9D">&#22914;&#26524;&#36973;&#36935; <code>ModuleNotFoundError</code> &#21487;&#20197;&#22312;&#32066;&#31471;&#27231;&#20351;&#29992; <code>pip install</code> &#25351;&#20196;&#23433;&#35037;<a class="anchor-link" href="#%E5%A6%82%E6%9E%9C%E9%81%AD%E9%81%87-ModuleNotFoundError-%E5%8F%AF%E4%BB%A5%E5%9C%A8%E7%B5%82%E7%AB%AF%E6%A9%9F%E4%BD%BF%E7%94%A8-pip-install-%E6%8C%87%E4%BB%A4%E5%AE%89%E8%A3%9D">&#182;</a></h2><div class="highlight"><pre><span></span>pip install requests
 </pre></div>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E5%8F%AF%E4%BB%A5%E9%80%8F%E9%81%8E%E5%85%A9%E5%80%8B%E5%B1%AC%E6%80%A7%E6%AA%A2%E6%9F%A5%E7%89%88%E6%9C%AC%E8%99%9F%E8%88%87%E5%AE%89%E8%A3%9D%E8%B7%AF%E5%BE%91">&#21487;&#20197;&#36879;&#36942;&#20841;&#20491;&#23660;&#24615;&#27298;&#26597;&#29256;&#26412;&#34399;&#33287;&#23433;&#35037;&#36335;&#24465;<a class="anchor-link" href="#%E5%8F%AF%E4%BB%A5%E9%80%8F%E9%81%8E%E5%85%A9%E5%80%8B%E5%B1%AC%E6%80%A7%E6%AA%A2%E6%9F%A5%E7%89%88%E6%9C%AC%E8%99%9F%E8%88%87%E5%AE%89%E8%A3%9D%E8%B7%AF%E5%BE%91">&#182;</a></h2><ul>
 <li><code>__version__</code> 屬性檢查版本號。</li>
@@ -14911,8 +15119,12 @@ ModuleNotFoundError: No module named 'requests'</code></pre>
 </ul>
 
 </div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
@@ -14927,12 +15139,12 @@ ModuleNotFoundError: No module named 'requests'</code></pre>
 </div>
 
 <div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -14948,8 +15160,12 @@ ModuleNotFoundError: No module named 'requests'</code></pre>
 
 </div>
 
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E4%BD%BF%E7%94%A8-Requests-%E7%9A%84%E5%85%A9%E5%80%8B%E5%87%BD%E6%95%B8%E5%82%B3%E8%BC%B8%E8%B3%87%E6%96%99">&#20351;&#29992; Requests &#30340;&#20841;&#20491;&#20989;&#25976;&#20659;&#36664;&#36039;&#26009;<a class="anchor-link" href="#%E4%BD%BF%E7%94%A8-Requests-%E7%9A%84%E5%85%A9%E5%80%8B%E5%87%BD%E6%95%B8%E5%82%B3%E8%BC%B8%E8%B3%87%E6%96%99">&#182;</a></h2><ul>
 <li><code>get(request_url, params=query_str_params)</code>：對 <code>request_url</code> 發送帶有 <code>query_str_params</code> 的 GET 請求。</li>
@@ -14957,8 +15173,12 @@ ModuleNotFoundError: No module named 'requests'</code></pre>
 </ul>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div>
+</div>
+</div></section><section ><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
@@ -14977,8 +15197,10 @@ ModuleNotFoundError: No module named 'requests'</code></pre>
 </div>
 </div>
 
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div></section><section ><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
@@ -14997,8 +15219,10 @@ ModuleNotFoundError: No module named 'requests'</code></pre>
 </div>
 </div>
 
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div></section><section ><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
@@ -15012,8 +15236,12 @@ ModuleNotFoundError: No module named 'requests'</code></pre>
 </div>
 </div>
 
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E5%B8%B8%E7%94%A8%E7%9A%84-Response-%E5%AF%A6%E4%BE%8B%E5%B1%AC%E6%80%A7%E8%88%87%E6%96%B9%E6%B3%95">&#24120;&#29992;&#30340; <code>Response</code> &#23526;&#20363;&#23660;&#24615;&#33287;&#26041;&#27861;<a class="anchor-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84-Response-%E5%AF%A6%E4%BE%8B%E5%B1%AC%E6%80%A7%E8%88%87%E6%96%B9%E6%B3%95">&#182;</a></h2><ul>
 <li><code>status_code</code> 屬性來驗證超文本傳輸協定的傳輸狀態。</li>
@@ -15022,45 +15250,88 @@ ModuleNotFoundError: No module named 'requests'</code></pre>
 </ul>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E4%BE%9D%E7%85%A7%E4%B8%8D%E5%90%8C%E8%B3%87%E6%96%99%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%9E%90">&#20381;&#29031;&#19981;&#21516;&#36039;&#26009;&#26684;&#24335;&#35299;&#26512;<a class="anchor-link" href="#%E4%BE%9D%E7%85%A7%E4%B8%8D%E5%90%8C%E8%B3%87%E6%96%99%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%9E%90">&#182;</a></h2><p>JSON 格式：使用 <code>Response</code> 實例的 <code>json</code> 方法建立 Python 資料結構<code>dict</code> 或 <code>list</code>。</p>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E4%BE%9D%E7%85%A7%E4%B8%8D%E5%90%8C%E8%B3%87%E6%96%99%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BA%8C%EF%BC%89">&#20381;&#29031;&#19981;&#21516;&#36039;&#26009;&#26684;&#24335;&#35299;&#26512;&#65288;&#32396;&#65289;<a class="anchor-link" href="#%E4%BE%9D%E7%85%A7%E4%B8%8D%E5%90%8C%E8%B3%87%E6%96%99%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BA%8C%EF%BC%89">&#182;</a></h2><p>XML 格式：利用標準模組 <code>xml</code> 的解析器將 <code>Response</code> 實例的 <code>text</code> 屬性轉換成 <code>element.tree</code> 實例。</p>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E4%BE%9D%E7%85%A7%E4%B8%8D%E5%90%8C%E8%B3%87%E6%96%99%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BA%8C%EF%BC%89">&#20381;&#29031;&#19981;&#21516;&#36039;&#26009;&#26684;&#24335;&#35299;&#26512;&#65288;&#32396;&#65289;<a class="anchor-link" href="#%E4%BE%9D%E7%85%A7%E4%B8%8D%E5%90%8C%E8%B3%87%E6%96%99%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BA%8C%EF%BC%89">&#182;</a></h2><p>HTML 格式：利用第三方模組 Beautiful Soup4 的解析器將 <code>Response</code> 實例的 <code>text</code> 屬性轉換成 <code>soup</code> 實例。</p>
 
 </div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section></section><section ><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="JSON-%E6%A0%BC%E5%BC%8F">JSON &#26684;&#24335;<a class="anchor-link" href="#JSON-%E6%A0%BC%E5%BC%8F">&#182;</a></h2>
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E4%BB%80%E9%BA%BC%E6%98%AF-JSON%EF%BC%9F">&#20160;&#40636;&#26159; JSON&#65311;<a class="anchor-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AF-JSON%EF%BC%9F">&#182;</a></h2><blockquote><p>JavaScript Object Notation (JSON)是依照 JavaScript 物件語法的資料格式，雖然是以 JavaScript 語法為基礎，但可獨立使用，且許多程式設計環境亦可讀取、解析並產生 JSON。JSON 可能是物件或字串。當你想從 JSON 中讀取資料時，JSON 可作為物件；當要跨網路傳送 JSON 時，就會是字串。JSON 物件可儲存於其自有的檔案中，基本上就是副檔名為 <code>.json</code> 的文字檔案。</p>
+<h2 id="%E4%BB%80%E9%BA%BC%E6%98%AF-JSON%EF%BC%9F">&#20160;&#40636;&#26159; JSON&#65311;<a class="anchor-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AF-JSON%EF%BC%9F">&#182;</a></h2><blockquote>
+<p>JavaScript Object Notation (JSON)是依照 JavaScript 物件語法的資料格式，雖然是以 JavaScript 語法為基礎，但可獨立使用，且許多程式設計環境亦可讀取、解析並產生 JSON。JSON 可能是物件或字串。當你想從 JSON 中讀取資料時，JSON 可作為物件；當要跨網路傳送 JSON 時，就會是字串。JSON 物件可儲存於其自有的檔案中，基本上就是副檔名為 <code>.json</code> 的文字檔案。</p>
 </blockquote>
 <p>來源：<a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON">mozilla.org</a></p>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E5%A6%82%E4%BD%95%E9%A9%97%E8%AD%89%E5%9B%9E%E6%87%89%E6%98%AF%E5%90%A6%E7%82%BA-JSON-%E6%A0%BC%E5%BC%8F%EF%BC%9F">&#22914;&#20309;&#39511;&#35657;&#22238;&#25033;&#26159;&#21542;&#28858; JSON &#26684;&#24335;&#65311;<a class="anchor-link" href="#%E5%A6%82%E4%BD%95%E9%A9%97%E8%AD%89%E5%9B%9E%E6%87%89%E6%98%AF%E5%90%A6%E7%82%BA-JSON-%E6%A0%BC%E5%BC%8F%EF%BC%9F">&#182;</a></h2><p>在開發人員工具 &gt; Network 檢視 Preview 或者 Response。</p>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="JSON-%E6%A0%BC%E5%BC%8F%E8%B3%87%E6%96%99%E7%9A%84%E5%85%A9%E7%A8%AE%E5%A4%96%E5%9E%8B">JSON &#26684;&#24335;&#36039;&#26009;&#30340;&#20841;&#31278;&#22806;&#22411;<a class="anchor-link" href="#JSON-%E6%A0%BC%E5%BC%8F%E8%B3%87%E6%96%99%E7%9A%84%E5%85%A9%E7%A8%AE%E5%A4%96%E5%9E%8B">&#182;</a></h2><ul>
 <li>鍵值外型：與 Python <code>dict</code> 相似。</li>
@@ -15068,14 +15339,24 @@ ModuleNotFoundError: No module named 'requests'</code></pre>
 </ul>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E7%9C%8B%E7%9C%8B-JSON-%E6%A0%BC%E5%BC%8F%E8%B3%87%E6%96%99">&#30475;&#30475; JSON &#26684;&#24335;&#36039;&#26009;<a class="anchor-link" href="#%E7%9C%8B%E7%9C%8B-JSON-%E6%A0%BC%E5%BC%8F%E8%B3%87%E6%96%99">&#182;</a></h2><p><a href="https://ecshweb.pchome.com.tw/search/v3.3/">https://ecshweb.pchome.com.tw/search/v3.3/</a>：關閉 JavaScript 後資料消失，檢查 <strong>XHR</strong>。</p>
 
 </div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
@@ -15094,13 +15375,21 @@ ModuleNotFoundError: No module named 'requests'</code></pre>
 </div>
 </div>
 
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E4%BD%BF%E7%94%A8-Response-%E5%AF%A6%E4%BE%8B%E7%9A%84-json()-%E6%96%B9%E6%B3%95%E8%A7%A3%E6%9E%90-JSON-%E6%A0%BC%E5%BC%8F%E8%B3%87%E6%96%99%E7%82%BA%E9%8D%B5%E5%80%BC%E5%A4%96%E5%9E%8B">&#20351;&#29992; Response &#23526;&#20363;&#30340; <code>json()</code> &#26041;&#27861;&#35299;&#26512; JSON &#26684;&#24335;&#36039;&#26009;&#28858;&#37749;&#20540;&#22806;&#22411;<a class="anchor-link" href="#%E4%BD%BF%E7%94%A8-Response-%E5%AF%A6%E4%BE%8B%E7%9A%84-json()-%E6%96%B9%E6%B3%95%E8%A7%A3%E6%9E%90-JSON-%E6%A0%BC%E5%BC%8F%E8%B3%87%E6%96%99%E7%82%BA%E9%8D%B5%E5%80%BC%E5%A4%96%E5%9E%8B">&#182;</a></h2>
 </div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
@@ -15116,12 +15405,12 @@ ModuleNotFoundError: No module named 'requests'</code></pre>
 </div>
 
 <div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -15137,13 +15426,21 @@ dict_keys([&#39;QTime&#39;, &#39;totalRows&#39;, &#39;totalPage&#39;, &#39;range
 
 </div>
 
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E4%BA%8B%E5%AF%A6%E4%B8%8A-response-%E5%AF%A6%E4%BE%8B%E7%9A%84-json()-%E6%96%B9%E6%B3%95%E6%98%AF%E4%BD%BF%E7%94%A8%E4%BA%86%E6%A8%99%E6%BA%96%E6%A8%A1%E7%B5%84-json-%E7%9A%84-loads-%E5%87%BD%E6%95%B8">&#20107;&#23526;&#19978; <code>response</code> &#23526;&#20363;&#30340; <code>json()</code> &#26041;&#27861;&#26159;&#20351;&#29992;&#20102;&#27161;&#28310;&#27169;&#32068; <code>json</code> &#30340; <code>loads</code> &#20989;&#25976;<a class="anchor-link" href="#%E4%BA%8B%E5%AF%A6%E4%B8%8A-response-%E5%AF%A6%E4%BE%8B%E7%9A%84-json()-%E6%96%B9%E6%B3%95%E6%98%AF%E4%BD%BF%E7%94%A8%E4%BA%86%E6%A8%99%E6%BA%96%E6%A8%A1%E7%B5%84-json-%E7%9A%84-loads-%E5%87%BD%E6%95%B8">&#182;</a></h2>
 </div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
@@ -15159,12 +15456,12 @@ dict_keys([&#39;QTime&#39;, &#39;totalRows&#39;, &#39;totalPage&#39;, &#39;range
 </div>
 
 <div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -15180,13 +15477,21 @@ dict_keys([&#39;QTime&#39;, &#39;totalRows&#39;, &#39;totalPage&#39;, &#39;range
 
 </div>
 
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="JSON-%E6%A0%BC%E5%BC%8F%E8%B3%87%E6%96%99%E7%9A%84%E9%99%A3%E5%88%97%E5%A4%96%E5%9E%8B">JSON &#26684;&#24335;&#36039;&#26009;&#30340;&#38499;&#21015;&#22806;&#22411;<a class="anchor-link" href="#JSON-%E6%A0%BC%E5%BC%8F%E8%B3%87%E6%96%99%E7%9A%84%E9%99%A3%E5%88%97%E5%A4%96%E5%9E%8B">&#182;</a></h2>
 </div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
@@ -15201,12 +15506,12 @@ dict_keys([&#39;QTime&#39;, &#39;totalRows&#39;, &#39;totalPage&#39;, &#39;range
 </div>
 
 <div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -15222,41 +15527,74 @@ dict_keys([&#39;QTime&#39;, &#39;totalRows&#39;, &#39;totalPage&#39;, &#39;range
 
 </div>
 
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div></section></section><section ><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="XML-%E6%A0%BC%E5%BC%8F">XML &#26684;&#24335;<a class="anchor-link" href="#XML-%E6%A0%BC%E5%BC%8F">&#182;</a></h2>
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E4%BB%80%E9%BA%BC%E6%98%AF-XML%EF%BC%9F">&#20160;&#40636;&#26159; XML&#65311;<a class="anchor-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AF-XML%EF%BC%9F">&#182;</a></h2><blockquote><p>XML(Extensible Markup Language) 是一種標記語言，它使用沒有預先定義名稱或功能的標籤來儲存資料，並且能透過 XPath 語法取得所需資料。</p>
+<h2 id="%E4%BB%80%E9%BA%BC%E6%98%AF-XML%EF%BC%9F">&#20160;&#40636;&#26159; XML&#65311;<a class="anchor-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AF-XML%EF%BC%9F">&#182;</a></h2><blockquote>
+<p>XML(Extensible Markup Language) 是一種標記語言，它使用沒有預先定義名稱或功能的標籤來儲存資料，並且能透過 XPath 語法取得所需資料。</p>
 </blockquote>
 <p>來源：<a href="https://developer.mozilla.org/en-US/docs/Web/XML">https://developer.mozilla.org/en-US/docs/Web/XML</a></p>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E5%A6%82%E4%BD%95%E9%A9%97%E8%AD%89%E5%9B%9E%E6%87%89%E6%98%AF%E5%90%A6%E7%82%BA-XML-%E6%A0%BC%E5%BC%8F%EF%BC%9F">&#22914;&#20309;&#39511;&#35657;&#22238;&#25033;&#26159;&#21542;&#28858; XML &#26684;&#24335;&#65311;<a class="anchor-link" href="#%E5%A6%82%E4%BD%95%E9%A9%97%E8%AD%89%E5%9B%9E%E6%87%89%E6%98%AF%E5%90%A6%E7%82%BA-XML-%E6%A0%BC%E5%BC%8F%EF%BC%9F">&#182;</a></h2><p>在開發人員工具 &gt; Network 檢視 Response 的第一個標籤是否有明確宣告 XML 格式。</p>
-
-<pre><code>&lt;?xml version="1.0"?&gt;...</code></pre>
+<pre><code>&lt;?xml version=&quot;1.0&quot;?&gt;...
+</code></pre>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="XML-%E6%A0%BC%E5%BC%8F%E8%B3%87%E6%96%99%E7%9A%84%E5%A4%96%E5%9E%8B">XML &#26684;&#24335;&#36039;&#26009;&#30340;&#22806;&#22411;<a class="anchor-link" href="#XML-%E6%A0%BC%E5%BC%8F%E8%B3%87%E6%96%99%E7%9A%84%E5%A4%96%E5%9E%8B">&#182;</a></h2><p>由開發者自行定義的標籤組成有階層的樹狀結構。</p>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E7%9C%8B%E7%9C%8B-XML-%E6%A0%BC%E5%BC%8F%E8%B3%87%E6%96%99">&#30475;&#30475; XML &#26684;&#24335;&#36039;&#26009;<a class="anchor-link" href="#%E7%9C%8B%E7%9C%8B-XML-%E6%A0%BC%E5%BC%8F%E8%B3%87%E6%96%99">&#182;</a></h2><p><a href="https://emap.pcsc.com.tw/：關閉">https://emap.pcsc.com.tw/：關閉</a> JavaScript 後資料消失，檢查 XHR。</p>
+<h2 id="%E7%9C%8B%E7%9C%8B-XML-%E6%A0%BC%E5%BC%8F%E8%B3%87%E6%96%99">&#30475;&#30475; XML &#26684;&#24335;&#36039;&#26009;<a class="anchor-link" href="#%E7%9C%8B%E7%9C%8B-XML-%E6%A0%BC%E5%BC%8F%E8%B3%87%E6%96%99">&#182;</a></h2><p><a href="https://emap.pcsc.com.tw/%EF%BC%9A%E9%97%9C%E9%96%89">https://emap.pcsc.com.tw/%EF%BC%9A%E9%97%9C%E9%96%89</a> JavaScript 後資料消失，檢查 XHR。</p>
 
+</div>
+</div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
@@ -15275,18 +15613,32 @@ dict_keys([&#39;QTime&#39;, &#39;totalRows&#39;, &#39;totalPage&#39;, &#39;range
 </div>
 </div>
 
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="XML-%E6%A0%BC%E5%BC%8F%EF%BC%9A%E5%88%A9%E7%94%A8%E6%A8%99%E6%BA%96%E6%A8%A1%E7%B5%84-xml-%E7%9A%84%E8%A7%A3%E6%9E%90%E5%99%A8%E5%B0%87-Response-%E5%AF%A6%E4%BE%8B%E7%9A%84-text-%E5%B1%AC%E6%80%A7%E8%BD%89%E6%8F%9B%E6%88%90-element.tree-%E5%AF%A6%E4%BE%8B%E3%80%82">XML &#26684;&#24335;&#65306;&#21033;&#29992;&#27161;&#28310;&#27169;&#32068; <code>xml</code> &#30340;&#35299;&#26512;&#22120;&#23559; <code>Response</code> &#23526;&#20363;&#30340; <code>text</code> &#23660;&#24615;&#36681;&#25563;&#25104; <code>element.tree</code> &#23526;&#20363;&#12290;<a class="anchor-link" href="#XML-%E6%A0%BC%E5%BC%8F%EF%BC%9A%E5%88%A9%E7%94%A8%E6%A8%99%E6%BA%96%E6%A8%A1%E7%B5%84-xml-%E7%9A%84%E8%A7%A3%E6%9E%90%E5%99%A8%E5%B0%87-Response-%E5%AF%A6%E4%BE%8B%E7%9A%84-text-%E5%B1%AC%E6%80%A7%E8%BD%89%E6%8F%9B%E6%88%90-element.tree-%E5%AF%A6%E4%BE%8B%E3%80%82">&#182;</a></h2>
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E4%BD%BF%E7%94%A8-ET-%E7%9A%84-fromstring-%E5%87%BD%E6%95%B8%E8%BD%89%E6%8F%9B%E6%96%87%E5%AD%97%E7%82%BA%E3%80%8C%E5%8F%AF%E8%A7%A3%E6%9E%90%E3%80%8D%E7%9A%84%E5%AF%A6%E4%BE%8B">&#20351;&#29992; <code>ET</code> &#30340; <code>fromstring</code> &#20989;&#25976;&#36681;&#25563;&#25991;&#23383;&#28858;&#12300;&#21487;&#35299;&#26512;&#12301;&#30340;&#23526;&#20363;<a class="anchor-link" href="#%E4%BD%BF%E7%94%A8-ET-%E7%9A%84-fromstring-%E5%87%BD%E6%95%B8%E8%BD%89%E6%8F%9B%E6%96%87%E5%AD%97%E7%82%BA%E3%80%8C%E5%8F%AF%E8%A7%A3%E6%9E%90%E3%80%8D%E7%9A%84%E5%AF%A6%E4%BE%8B">&#182;</a></h2>
 </div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
@@ -15301,12 +15653,12 @@ dict_keys([&#39;QTime&#39;, &#39;totalRows&#39;, &#39;totalPage&#39;, &#39;range
 </div>
 
 <div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -15321,16 +15673,25 @@ dict_keys([&#39;QTime&#39;, &#39;totalRows&#39;, &#39;totalPage&#39;, &#39;range
 
 </div>
 
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E9%80%8F%E9%81%8E-XPath-%E5%8F%96%E5%BE%97%E6%8C%87%E5%AE%9A%E6%A8%99%E7%B1%A4%E5%84%B2%E5%AD%98%E7%9A%84%E8%B3%87%E6%96%99">&#36879;&#36942; XPath &#21462;&#24471;&#25351;&#23450;&#27161;&#31844;&#20786;&#23384;&#30340;&#36039;&#26009;<a class="anchor-link" href="#%E9%80%8F%E9%81%8E-XPath-%E5%8F%96%E5%BE%97%E6%8C%87%E5%AE%9A%E6%A8%99%E7%B1%A4%E5%84%B2%E5%AD%98%E7%9A%84%E8%B3%87%E6%96%99">&#182;</a></h2><blockquote><p>XPath 指的是 XML 路徑語言，透過該語言可以指定 XML 文件中指定的部分、標籤。</p>
+<h2 id="%E9%80%8F%E9%81%8E-XPath-%E5%8F%96%E5%BE%97%E6%8C%87%E5%AE%9A%E6%A8%99%E7%B1%A4%E5%84%B2%E5%AD%98%E7%9A%84%E8%B3%87%E6%96%99">&#36879;&#36942; XPath &#21462;&#24471;&#25351;&#23450;&#27161;&#31844;&#20786;&#23384;&#30340;&#36039;&#26009;<a class="anchor-link" href="#%E9%80%8F%E9%81%8E-XPath-%E5%8F%96%E5%BE%97%E6%8C%87%E5%AE%9A%E6%A8%99%E7%B1%A4%E5%84%B2%E5%AD%98%E7%9A%84%E8%B3%87%E6%96%99">&#182;</a></h2><blockquote>
+<p>XPath 指的是 XML 路徑語言，透過該語言可以指定 XML 文件中指定的部分、標籤。</p>
 </blockquote>
 <p>來源：<a href="https://developer.mozilla.org/en-US/docs/Web/XPath">https://developer.mozilla.org/en-US/docs/Web/XPath</a></p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div>
+</div>
+</div></section><section ><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
@@ -15346,12 +15707,12 @@ dict_keys([&#39;QTime&#39;, &#39;totalRows&#39;, &#39;totalPage&#39;, &#39;range
 </div>
 
 <div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -15366,8 +15727,10 @@ dict_keys([&#39;QTime&#39;, &#39;totalRows&#39;, &#39;totalPage&#39;, &#39;range
 
 </div>
 
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section ><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
@@ -15383,12 +15746,12 @@ dict_keys([&#39;QTime&#39;, &#39;totalRows&#39;, &#39;totalPage&#39;, &#39;range
 </div>
 
 <div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -15403,41 +15766,74 @@ dict_keys([&#39;QTime&#39;, &#39;totalRows&#39;, &#39;totalPage&#39;, &#39;range
 
 </div>
 
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div></section></section><section ><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="HTML-%E6%A0%BC%E5%BC%8F">HTML &#26684;&#24335;<a class="anchor-link" href="#HTML-%E6%A0%BC%E5%BC%8F">&#182;</a></h2>
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E4%BB%80%E9%BA%BC%E6%98%AF-HTML%EF%BC%9F">&#20160;&#40636;&#26159; HTML&#65311;<a class="anchor-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AF-HTML%EF%BC%9F">&#182;</a></h2><blockquote><p>HTML（HyperText Markup Language，超文本標記語言）是打造網頁的基石，是表述並定義網頁架構的標記語言。HTML 包含了一系列的元素（elements），而元素包含了預先定義功能以及名稱的標籤與內容，並透過標籤來控制內容的呈現樣貌。</p>
+<h2 id="%E4%BB%80%E9%BA%BC%E6%98%AF-HTML%EF%BC%9F">&#20160;&#40636;&#26159; HTML&#65311;<a class="anchor-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AF-HTML%EF%BC%9F">&#182;</a></h2><blockquote>
+<p>HTML（HyperText Markup Language，超文本標記語言）是打造網頁的基石，是表述並定義網頁架構的標記語言。HTML 包含了一系列的元素（elements），而元素包含了預先定義功能以及名稱的標籤與內容，並透過標籤來控制內容的呈現樣貌。</p>
 </blockquote>
 <p>來源：<a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML">https://developer.mozilla.org/en-US/docs/Glossary/HTML</a></p>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E5%A6%82%E4%BD%95%E9%A9%97%E8%AD%89%E5%9B%9E%E6%87%89%E6%98%AF%E5%90%A6%E7%82%BA-HTML-%E6%A0%BC%E5%BC%8F%EF%BC%9F">&#22914;&#20309;&#39511;&#35657;&#22238;&#25033;&#26159;&#21542;&#28858; HTML &#26684;&#24335;&#65311;<a class="anchor-link" href="#%E5%A6%82%E4%BD%95%E9%A9%97%E8%AD%89%E5%9B%9E%E6%87%89%E6%98%AF%E5%90%A6%E7%82%BA-HTML-%E6%A0%BC%E5%BC%8F%EF%BC%9F">&#182;</a></h2><p>在開發人員工具 &gt; Network 檢視 Response 的第一個標籤是否有明確宣告 HTML 格式。</p>
-
-<pre><code>&lt;!DOCTYPE html&gt;...</code></pre>
+<pre><code>&lt;!DOCTYPE html&gt;...
+</code></pre>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="HTML-%E6%A0%BC%E5%BC%8F%E8%B3%87%E6%96%99%E7%9A%84%E5%A4%96%E5%9E%8B">HTML &#26684;&#24335;&#36039;&#26009;&#30340;&#22806;&#22411;<a class="anchor-link" href="#HTML-%E6%A0%BC%E5%BC%8F%E8%B3%87%E6%96%99%E7%9A%84%E5%A4%96%E5%9E%8B">&#182;</a></h2><p>由預先定義的標籤組成有階層的樹狀結構。</p>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E7%9C%8B%E7%9C%8B-HTML-%E6%A0%BC%E5%BC%8F%E8%B3%87%E6%96%99">&#30475;&#30475; HTML &#26684;&#24335;&#36039;&#26009;<a class="anchor-link" href="#%E7%9C%8B%E7%9C%8B-HTML-%E6%A0%BC%E5%BC%8F%E8%B3%87%E6%96%99">&#182;</a></h2><p><a href="https://www.imdb.com/">https://www.imdb.com/</a>：關閉 JavaScript 後資料仍然存在，檢查 Doc。</p>
 
 </div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
@@ -15451,26 +15847,47 @@ dict_keys([&#39;QTime&#39;, &#39;totalRows&#39;, &#39;totalPage&#39;, &#39;range
 </div>
 </div>
 
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="HTML-%E6%A0%BC%E5%BC%8F%EF%BC%9A%E5%88%A9%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E7%B5%84-Beautiful-Soup-%E7%9A%84%E8%A7%A3%E6%9E%90%E5%99%A8%E5%B0%87Response-%E5%AF%A6%E4%BE%8B%E7%9A%84-text-%E5%B1%AC%E6%80%A7%E8%BD%89%E6%8F%9B%E6%88%90-soup-%E5%AF%A6%E4%BE%8B%E3%80%82">HTML &#26684;&#24335;&#65306;&#21033;&#29992;&#31532;&#19977;&#26041;&#27169;&#32068; Beautiful Soup &#30340;&#35299;&#26512;&#22120;&#23559;<code>Response</code> &#23526;&#20363;&#30340; <code>text</code> &#23660;&#24615;&#36681;&#25563;&#25104; <code>soup</code> &#23526;&#20363;&#12290;<a class="anchor-link" href="#HTML-%E6%A0%BC%E5%BC%8F%EF%BC%9A%E5%88%A9%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E7%B5%84-Beautiful-Soup-%E7%9A%84%E8%A7%A3%E6%9E%90%E5%99%A8%E5%B0%87Response-%E5%AF%A6%E4%BE%8B%E7%9A%84-text-%E5%B1%AC%E6%80%A7%E8%BD%89%E6%8F%9B%E6%88%90-soup-%E5%AF%A6%E4%BE%8B%E3%80%82">&#182;</a></h2>
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E4%BB%80%E9%BA%BC%E6%98%AF-Beautiful-Soup%EF%BC%9F">&#20160;&#40636;&#26159; Beautiful Soup&#65311;<a class="anchor-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AF-Beautiful-Soup%EF%BC%9F">&#182;</a></h2><blockquote><p>Beautiful Soup 是 Python 的第三方模組，可以讓使用者快速解析 HTML 格式資料，從中擷取出使用者需要的資料。</p>
+<h2 id="%E4%BB%80%E9%BA%BC%E6%98%AF-Beautiful-Soup%EF%BC%9F">&#20160;&#40636;&#26159; Beautiful Soup&#65311;<a class="anchor-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AF-Beautiful-Soup%EF%BC%9F">&#182;</a></h2><blockquote>
+<p>Beautiful Soup 是 Python 的第三方模組，可以讓使用者快速解析 HTML 格式資料，從中擷取出使用者需要的資料。</p>
 </blockquote>
 <p>來源：<a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">https://www.crummy.com/software/BeautifulSoup/bs4/doc/</a></p>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E4%BB%A5-from-bs4-import-BeautifulSoup-%E6%8C%87%E4%BB%A4%E8%BC%89%E5%85%A5%E5%87%BD%E6%95%B8">&#20197; <code>from bs4 import BeautifulSoup</code> &#25351;&#20196;&#36617;&#20837;&#20989;&#25976;<a class="anchor-link" href="#%E4%BB%A5-from-bs4-import-BeautifulSoup-%E6%8C%87%E4%BB%A4%E8%BC%89%E5%85%A5%E5%87%BD%E6%95%B8">&#182;</a></h2>
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div>
+</div>
+</div></section><section ><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
@@ -15483,29 +15900,49 @@ dict_keys([&#39;QTime&#39;, &#39;totalRows&#39;, &#39;totalPage&#39;, &#39;range
 </div>
 </div>
 
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E5%A6%82%E6%9E%9C%E7%92%B0%E5%A2%83%E4%B8%AD%E6%B2%92%E6%9C%89%E5%AE%89%E8%A3%9D-Beautiful-Soup%EF%BC%8C%E8%BC%89%E5%85%A5%E6%99%82%E6%9C%83%E9%81%AD%E9%81%87-ModuleNotFoundError">&#22914;&#26524;&#29872;&#22659;&#20013;&#27794;&#26377;&#23433;&#35037; Beautiful Soup&#65292;&#36617;&#20837;&#26178;&#26371;&#36973;&#36935; <code>ModuleNotFoundError</code><a class="anchor-link" href="#%E5%A6%82%E6%9E%9C%E7%92%B0%E5%A2%83%E4%B8%AD%E6%B2%92%E6%9C%89%E5%AE%89%E8%A3%9D-Beautiful-Soup%EF%BC%8C%E8%BC%89%E5%85%A5%E6%99%82%E6%9C%83%E9%81%AD%E9%81%87-ModuleNotFoundError">&#182;</a></h2>
-<pre><code>Traceback (most recent call last):
-  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
-ModuleNotFoundError: No module named 'bs4'</code></pre>
+<h2 id="%E5%A6%82%E6%9E%9C%E7%92%B0%E5%A2%83%E4%B8%AD%E6%B2%92%E6%9C%89%E5%AE%89%E8%A3%9D-Beautiful-Soup%EF%BC%8C%E8%BC%89%E5%85%A5%E6%99%82%E6%9C%83%E9%81%AD%E9%81%87-ModuleNotFoundError">&#22914;&#26524;&#29872;&#22659;&#20013;&#27794;&#26377;&#23433;&#35037; Beautiful Soup&#65292;&#36617;&#20837;&#26178;&#26371;&#36973;&#36935; <code>ModuleNotFoundError</code><a class="anchor-link" href="#%E5%A6%82%E6%9E%9C%E7%92%B0%E5%A2%83%E4%B8%AD%E6%B2%92%E6%9C%89%E5%AE%89%E8%A3%9D-Beautiful-Soup%EF%BC%8C%E8%BC%89%E5%85%A5%E6%99%82%E6%9C%83%E9%81%AD%E9%81%87-ModuleNotFoundError">&#182;</a></h2><pre><code>Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+ModuleNotFoundError: No module named 'bs4'
+</code></pre>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E5%A6%82%E6%9E%9C%E9%81%AD%E9%81%87-ModuleNotFoundError-%E5%8F%AF%E4%BB%A5%E5%9C%A8%E7%B5%82%E7%AB%AF%E6%A9%9F%E4%BD%BF%E7%94%A8-pip-install-%E6%8C%87%E4%BB%A4%E5%AE%89%E8%A3%9D">&#22914;&#26524;&#36973;&#36935; <code>ModuleNotFoundError</code> &#21487;&#20197;&#22312;&#32066;&#31471;&#27231;&#20351;&#29992; <code>pip install</code> &#25351;&#20196;&#23433;&#35037;<a class="anchor-link" href="#%E5%A6%82%E6%9E%9C%E9%81%AD%E9%81%87-ModuleNotFoundError-%E5%8F%AF%E4%BB%A5%E5%9C%A8%E7%B5%82%E7%AB%AF%E6%A9%9F%E4%BD%BF%E7%94%A8-pip-install-%E6%8C%87%E4%BB%A4%E5%AE%89%E8%A3%9D">&#182;</a></h2><div class="highlight"><pre><span></span>pip install beautifulsoup4
 </pre></div>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E4%BD%BF%E7%94%A8-Beautiful-Soup-%E7%9A%84-BeautifulSoup-%E5%87%BD%E6%95%B8%E8%BD%89%E6%8F%9B%E6%96%87%E5%AD%97%E7%82%BA%E3%80%8C%E5%8F%AF%E8%A7%A3%E6%9E%90%E3%80%8D%E7%9A%84%E5%AF%A6%E4%BE%8B">&#20351;&#29992; Beautiful Soup &#30340; <code>BeautifulSoup</code> &#20989;&#25976;&#36681;&#25563;&#25991;&#23383;&#28858;&#12300;&#21487;&#35299;&#26512;&#12301;&#30340;&#23526;&#20363;<a class="anchor-link" href="#%E4%BD%BF%E7%94%A8-Beautiful-Soup-%E7%9A%84-BeautifulSoup-%E5%87%BD%E6%95%B8%E8%BD%89%E6%8F%9B%E6%96%87%E5%AD%97%E7%82%BA%E3%80%8C%E5%8F%AF%E8%A7%A3%E6%9E%90%E3%80%8D%E7%9A%84%E5%AF%A6%E4%BE%8B">&#182;</a></h2>
 </div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
@@ -15520,12 +15957,12 @@ ModuleNotFoundError: No module named 'bs4'</code></pre>
 </div>
 
 <div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -15540,16 +15977,27 @@ ModuleNotFoundError: No module named 'bs4'</code></pre>
 
 </div>
 
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E4%BD%BF%E7%94%A8-CSS-%E9%81%B8%E6%93%87%E5%99%A8%E5%8F%96%E5%BE%97%E6%8C%87%E5%AE%9A%E6%A8%99%E7%B1%A4%E4%B8%AD%E7%9A%84%E5%85%A7%E5%AE%B9%E6%88%96%E5%B1%AC%E6%80%A7">&#20351;&#29992; CSS &#36984;&#25799;&#22120;&#21462;&#24471;&#25351;&#23450;&#27161;&#31844;&#20013;&#30340;&#20839;&#23481;&#25110;&#23660;&#24615;<a class="anchor-link" href="#%E4%BD%BF%E7%94%A8-CSS-%E9%81%B8%E6%93%87%E5%99%A8%E5%8F%96%E5%BE%97%E6%8C%87%E5%AE%9A%E6%A8%99%E7%B1%A4%E4%B8%AD%E7%9A%84%E5%85%A7%E5%AE%B9%E6%88%96%E5%B1%AC%E6%80%A7">&#182;</a></h2><blockquote><p>CSS 選擇器是 CSS 規則的一部分，它能讓開發者選定要調整哪個（或哪些）HTML 元素的樣式，在爬蟲程式中我們利用 CSS 選擇進行「選定」但是不做「調整」，這是與網頁前端工程最大的不同。</p>
+<h2 id="%E4%BD%BF%E7%94%A8-CSS-%E9%81%B8%E6%93%87%E5%99%A8%E5%8F%96%E5%BE%97%E6%8C%87%E5%AE%9A%E6%A8%99%E7%B1%A4%E4%B8%AD%E7%9A%84%E5%85%A7%E5%AE%B9%E6%88%96%E5%B1%AC%E6%80%A7">&#20351;&#29992; CSS &#36984;&#25799;&#22120;&#21462;&#24471;&#25351;&#23450;&#27161;&#31844;&#20013;&#30340;&#20839;&#23481;&#25110;&#23660;&#24615;<a class="anchor-link" href="#%E4%BD%BF%E7%94%A8-CSS-%E9%81%B8%E6%93%87%E5%99%A8%E5%8F%96%E5%BE%97%E6%8C%87%E5%AE%9A%E6%A8%99%E7%B1%A4%E4%B8%AD%E7%9A%84%E5%85%A7%E5%AE%B9%E6%88%96%E5%B1%AC%E6%80%A7">&#182;</a></h2><blockquote>
+<p>CSS 選擇器是 CSS 規則的一部分，它能讓開發者選定要調整哪個（或哪些）HTML 元素的樣式，在爬蟲程式中我們利用 CSS 選擇進行「選定」但是不做「調整」，這是與網頁前端工程最大的不同。</p>
 </blockquote>
 <p>來源：<a href="https://developer.mozilla.org/en-US/docs/Glossary/CSS_Selector">https://developer.mozilla.org/en-US/docs/Glossary/CSS_Selector</a></p>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="CSS-%E5%9F%BA%E6%9C%AC%E9%81%B8%E6%93%87%E5%99%A8%E5%8C%85%E5%90%AB">CSS &#22522;&#26412;&#36984;&#25799;&#22120;&#21253;&#21547;<a class="anchor-link" href="#CSS-%E5%9F%BA%E6%9C%AC%E9%81%B8%E6%93%87%E5%99%A8%E5%8C%85%E5%90%AB">&#182;</a></h2><ul>
 <li>類型選擇器 <code>elementname</code> 例如 <code>h1</code>。</li>
@@ -15559,8 +16007,14 @@ ModuleNotFoundError: No module named 'bs4'</code></pre>
 </ul>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E9%9D%9E%E7%B6%B2%E9%A0%81%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB%E4%B8%8D%E6%98%93%E5%BF%AB%E9%80%9F%E5%88%A4%E6%96%B7-CSS-%E9%81%B8%E6%93%87%E5%99%A8">&#38750;&#32178;&#38913;&#21069;&#31471;&#24037;&#31243;&#24107;&#19981;&#26131;&#24555;&#36895;&#21028;&#26039; CSS &#36984;&#25799;&#22120;<a class="anchor-link" href="#%E9%9D%9E%E7%B6%B2%E9%A0%81%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB%E4%B8%8D%E6%98%93%E5%BF%AB%E9%80%9F%E5%88%A4%E6%96%B7-CSS-%E9%81%B8%E6%93%87%E5%99%A8">&#182;</a></h2><ul>
 <li>在「欲選擇」的網頁元素按右鍵 &gt; Inspect 觀察 CSS 選擇器該如何宣告。</li>
@@ -15568,8 +16022,12 @@ ModuleNotFoundError: No module named 'bs4'</code></pre>
 </ul>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div>
+</div>
+</div></section><section ><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
@@ -15585,12 +16043,12 @@ ModuleNotFoundError: No module named 'bs4'</code></pre>
 </div>
 
 <div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -15605,8 +16063,10 @@ ModuleNotFoundError: No module named 'bs4'</code></pre>
 
 </div>
 
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section ><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
@@ -15622,12 +16082,12 @@ ModuleNotFoundError: No module named 'bs4'</code></pre>
 </div>
 
 <div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -15642,8 +16102,10 @@ ModuleNotFoundError: No module named 'bs4'</code></pre>
 
 </div>
 
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section ><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
@@ -15659,12 +16121,12 @@ ModuleNotFoundError: No module named 'bs4'</code></pre>
 </div>
 
 <div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -15679,8 +16141,10 @@ ModuleNotFoundError: No module named 'bs4'</code></pre>
 
 </div>
 
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section ><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
@@ -15699,12 +16163,12 @@ ModuleNotFoundError: No module named 'bs4'</code></pre>
 </div>
 
 <div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -15719,8 +16183,10 @@ ModuleNotFoundError: No module named 'bs4'</code></pre>
 
 </div>
 
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section ><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
@@ -15736,12 +16202,12 @@ ModuleNotFoundError: No module named 'bs4'</code></pre>
 </div>
 
 <div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -15756,8 +16222,12 @@ ModuleNotFoundError: No module named 'bs4'</code></pre>
 
 </div>
 
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E5%A6%82%E6%9E%9C%E5%B0%8D%E7%B6%B2%E8%B7%AF%E8%B3%87%E6%96%99%E6%93%B7%E5%8F%96%E5%BE%88%E6%9C%89%E8%88%88%E8%B6%A3%EF%BC%8C%E5%BB%BA%E8%AD%B0%E5%86%8D%E9%80%B2%E4%BF%AE%E7%B6%B2%E9%A0%81%E5%B7%A5%E7%A8%8B">&#22914;&#26524;&#23565;&#32178;&#36335;&#36039;&#26009;&#25847;&#21462;&#24456;&#26377;&#33288;&#36259;&#65292;&#24314;&#35696;&#20877;&#36914;&#20462;&#32178;&#38913;&#24037;&#31243;<a class="anchor-link" href="#%E5%A6%82%E6%9E%9C%E5%B0%8D%E7%B6%B2%E8%B7%AF%E8%B3%87%E6%96%99%E6%93%B7%E5%8F%96%E5%BE%88%E6%9C%89%E8%88%88%E8%B6%A3%EF%BC%8C%E5%BB%BA%E8%AD%B0%E5%86%8D%E9%80%B2%E4%BF%AE%E7%B6%B2%E9%A0%81%E5%B7%A5%E7%A8%8B">&#182;</a></h2><ul>
 <li>HTML/CSS/JavaScript 基礎。</li>
@@ -15766,8 +16236,14 @@ ModuleNotFoundError: No module named 'bs4'</code></pre>
 </ul>
 
 </div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section></section><section ><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E9%87%8D%E9%BB%9E%E7%B5%B1%E6%95%B4">&#37325;&#40670;&#32113;&#25972;<a class="anchor-link" href="#%E9%87%8D%E9%BB%9E%E7%B5%B1%E6%95%B4">&#182;</a></h2><ul>
 <li>網路資料擷取的兩個核心任務<ul>
@@ -15783,8 +16259,14 @@ ModuleNotFoundError: No module named 'bs4'</code></pre>
 </ul>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E9%87%8D%E9%BB%9E%E7%B5%B1%E6%95%B4%EF%BC%88%E7%BA%8C%EF%BC%89">&#37325;&#40670;&#32113;&#25972;&#65288;&#32396;&#65289;<a class="anchor-link" href="#%E9%87%8D%E9%BB%9E%E7%B5%B1%E6%95%B4%EF%BC%88%E7%BA%8C%EF%BC%89">&#182;</a></h2><ul>
 <li>依照不同資料格式解析：<ul>
@@ -15797,6 +16279,8 @@ ModuleNotFoundError: No module named 'bs4'</code></pre>
 <li>HTML 格式：使用 XPath 或 CSS 選擇器取得指定標籤中的內容或屬性。</li>
 </ul>
 
+</div>
+</div>
 </div>
 </div></section></section>
 </div>
